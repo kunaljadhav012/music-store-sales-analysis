@@ -1,6 +1,6 @@
 select * from employee
 
-### Q1: Who is the senior most employee based on job title?
+### Q1: Who is the senior most employee based on job title?##
 
 select first_name, last_name, title
 from employee 
@@ -9,7 +9,7 @@ limit 1
 
 
 
-### Q2: Which countries have the most Invoices?
+### Q2: Which countries have the most Invoices?##
 
 select * from invoice
 
@@ -20,7 +20,7 @@ order by total_invoices desc
 
 
 
-### Q3: What are top 3 values of total invoice? 
+### Q3: What are top 3 values of total invoice? ##
 
  select * from invoice
  
@@ -33,7 +33,7 @@ limit 3
 
 ### Q4: Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. 
 Write a query that returns one city that has the highest sum of invoice totals. 
-Return both the city name & sum of all invoice totals
+Return both the city name & sum of all invoice totals##
 
 select billing_city, sum(total) as invoice_sum 
 from invoice
@@ -44,7 +44,7 @@ limit 1
 
 
 ### Q5: Who is the best customer? The customer who has spent the most money will be declared the best customer. 
-Write a query that returns the person who has spent the most money
+Write a query that returns the person who has spent the most money##
 
 select * from customer
 select * from invoice
@@ -59,7 +59,7 @@ limit 1
 
 
 ### Q6: Write query to return the email, first name, last name, & Genre of all Rock Music listeners.
-Return your list ordered alphabetically by email starting with A.
+Return your list ordered alphabetically by email starting with A.##
 
 select * from customer 
 select * from invoice 
@@ -79,7 +79,7 @@ order by c.email asc
 
 
 ### Q7: Let's invite the artists who have written the most rock music in our dataset.
-Write a query that returns the Artist name and total track count of the top 10 rock bands,
+Write a query that returns the Artist name and total track count of the top 10 rock bands,##
 
 select * from artist
 select * from album
@@ -99,7 +99,7 @@ limit 10
 
 
 ### Q8: Return all the track names that have a song length longer than the average song length. 
-Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first
+Return the Name and Milliseconds for each track. Order by the song length with the longest songs listed first##
 
 select * from track
 
@@ -110,7 +110,7 @@ order by milliseconds desc
 
 
 
-### Q9: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent
+### Q9: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent##
 
 customer invoice invoice_line track album artist 
 
@@ -128,7 +128,7 @@ order by total_spend desc
 
 ### Q10: We want to find out the most popular music Genre for each country. We determine the most popular genre as the genre 
 with the highest amount of purchases. Write a query that returns each country along with the top Genre. For countries where 
-the maximum number of purchases is shared return all Genres
+the maximum number of purchases is shared return all Genres##
 
 WITH popular_genre AS (
 
